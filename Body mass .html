@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="one" placeholder="MASS"> 
+    <input type="number" id="two" placeholder="HEIGHT">
+    <button id="button" onclick="weightButton()">check weight</button>
+    <div id="BMI"></div>
+        <div id="BMI2"></div>
+</body>
+</html>
+<script>
+   function weightButton(params) {
+        let button = document.getElementById("button")
+        BMI.innerHTML = (one.value * 10) / (two.value * two.value)
+        if (BMI.innerHTML <= 18.5) {
+            BMI2.innerHTML = "Underweight"
+        }else if ( BMI.innerHTML  >= 18.5 && BMI.innerHTML <= 24.9){
+            BMI2.innerHTML = "Normal"
+        }
+        else if ( BMI.innerHTML  >= 25 && BMI.innerHTML <= 29.9){
+            BMI2.innerHTML = "overWeight"
+        }    else{
+            BMI2.innerHTML = "obese"
+        }
+     
+   }
+</script>
